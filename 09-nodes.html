@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Locating, Adding, and Removing Nodes using the HTML DOM</title>
+</head>
+
+<body>
+  <h1>Locating, Adding, and Removing Nodes using the HTML DOM</h1>
+  <h2>note: in addition, review slides on this material</h2>
+
+  <p>This is a paragraph.</p>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <button id="addw-btn">Add Item</button>
+  <button id="remove-btn">Remove Item</button>
+
+  <script>
+    // Locate the <ul> element
+    const ul = document.querySelector('ul');
+
+    // Add event listener for the "Add Item" button
+    const addBtn = document.querySelector('#add-btn');
+    addBtn.addEventListener('click', () => {
+      // Create a new <li> element
+      const li = document.createElement('li');
+      li.textContent = 'New Item';
+
+      // Append the new <li> element to the <ul> element
+      ul.appendChild(li);
+    });
+
+    // Add event listener for the "Remove Item" button
+    const removeBtn = document.querySelector('#remove-btn');
+    removeBtn.addEventListener('click', () => {
+      // Remove the last <li> element from the <ul> element
+      ul.removeChild(ul.lastElementChild);
+    });
+  </script>
+</body>
+
+</html>

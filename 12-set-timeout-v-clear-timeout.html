@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>setTimeout() vs setInterval()</title>
+</head>
+
+<body>
+  <h1>setTimeout() vs setInterval()</h1>
+  <p>
+    In this example, we have two buttons: one for setTimeout() and one for setInterval(). Clicking the setTimeout()
+    button will start a timeout that fires once per second and increments a counter. Clicking the setInterval() button
+    will start an interval that fires once per second and increments the same counter.
+  </p>
+  <p>
+    The key difference between setTimeout() and setInterval() is that setTimeout() fires a function once after a
+    specified delay, while setInterval() fires a function repeatedly at a specified interval. In this example, the
+    startTimeout() function uses setTimeout() to repeatedly fire a function after a delay of one second, while the
+    startInterval() function uses setInterval() to repeatedly fire a function at an interval of one second.
+  </p>
+  <p>
+    Note that in the startTimeout() and startInterval() functions, we use clearTimeout() and clearInterval()
+    respectively to stop the other timer if it is already running. This ensures that only one timer is active at a time.
+  </p>
+
+
+  <p>Click the buttons below to see the difference:</p>
+  <button onclick="startTimeout()">setTimeout()</button>
+  <button onclick="startInterval()">setInterval()</button>
+  <div id="output"></div>
+  <script>
+    let timeoutId;
+    let intervalId;
+    let count = 0;
+
+    function startTimeout() {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+      timeoutId = setTimeout(function () {
+        count++;
+        document.getElementById("output").innerHTML += "Timeout! Count: " + count + "<br>";
+        startTimeout();
+      }, 1000);
+    }
+
+    function startInterval() {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+      intervalId = setInterval(function () {
+        count++;
+        document.getElementById("output").innerHTML += "Interval! Count: " + count + "<br>";
+      }, 1000);
+    }
+  </script>
+</body>
+
+</html>

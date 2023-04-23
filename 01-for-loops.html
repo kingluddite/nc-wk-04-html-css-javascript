@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Car Brands List</title>
+</head>
+
+<body>
+  <h1>The for loop</h1>
+  <p>
+    An HTML file with embedded JavaScript that uses a for loop to loop through an array of car brands and display them
+    in a list:
+  </p>
+  <p>
+    This code defines an array of car brands, creates an unordered list in the HTML, and then loops through the array
+    using
+    a for loop. For each car brand in the array, it creates a new list item element, sets its text content to the car
+    brand,
+    and appends it to the unordered list. The result is a list of car brands displayed in the HTML page.
+  </p>
+  <h2>List of Car Brands</h2>
+  <ul id="car-brands"></ul>
+
+  <script>
+    const carBrands = ["Toyota", "Honda", "Ford", "Chevrolet", "Nissan"];
+
+    const carBrandsList = document.getElementById("car-brands");
+
+    for (let i = 0; i < carBrands.length; i++) {
+      const carBrand = carBrands[i];
+      const listItem = document.createElement("li");
+      listItem.textContent = carBrand;
+      carBrandsList.appendChild(listItem);
+    }
+  </script>
+</body>
+
+</html>

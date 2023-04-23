@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>splice() vs slice()</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      margin: 1rem;
+      padding: 1rem;
+      max-width: 30rem;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .summary {
+      margin-top: 1rem;
+    }
+
+    .example {
+      margin-top: 1rem;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>splice() vs slice()</h1>
+
+  <ul>
+    <li>
+      <h2>splice()</h2>
+      <div class="summary">
+        <p>
+          The <code>splice()</code> method changes the contents of an array by
+          removing or replacing existing elements and/or adding new elements
+          in place.
+        </p>
+      </div>
+      <div class="example">
+        <p>Example:</p>
+        <pre>
+const arr = [1, 2, 3, 4, 5];
+const removed = arr.splice(2, 2, 'a', 'b', 'c');
+console.log(arr); // [1, 2, 'a', 'b', 'c', 5]
+console.log(removed); // [3, 4]</pre>
+      </div>
+    </li>
+
+    <li>
+      <h2>slice()</h2>
+      <div class="summary">
+        <p>
+          The <code>slice()</code> method returns a new array containing
+          elements from the original array. You can specify the start and end
+          indices of the slice. The original array is not modified.
+        </p>
+      </div>
+      <div class="example">
+        <p>Example:</p>
+        <pre>
+const arr = [1, 2, 3, 4, 5];
+const sliced = arr.slice(2, 4);
+console.log(sliced); // [3, 4]
+console.log(arr); // [1, 2, 3, 4, 5]</pre>
+      </div>
+    </li>
+  </ul>
+</body>
+
+</html>

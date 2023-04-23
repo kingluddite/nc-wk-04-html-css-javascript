@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clone Node Example</title>
+</head>
+<body>
+	<div id="original">
+		<p>This is the original node</p>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+	</div>
+	<div id="clone">
+		<p>This is the cloned node</p>
+	</div>
+	<script>
+		const original = document.querySelector("#original");
+		const clone = document.querySelector("#clone");
+		const shallowClone = original.cloneNode();
+		const deepClone = original.cloneNode(true);
+		clone.appendChild(shallowClone);
+		clone.appendChild(deepClone);
+	</script>
+</body>
+</html>

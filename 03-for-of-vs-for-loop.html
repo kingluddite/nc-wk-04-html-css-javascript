@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>For Loop vs For...of Loop</title>
+</head>
+
+<body>
+  <h1>For Loop vs For...of Loop</h1>
+  <p>When iterating over an array in JavaScript, you can use a <code>for</code> loop or a <code>for...of</code> loop.
+  </p>
+  <p>Here are some differences between the two:</p>
+  <ul>
+    <li><strong>For Loop:</strong> Iterates over an array using an index variable</li>
+    <li><strong>For...of Loop:</strong> Iterates over an array using a reference to the value</li>
+    <li><strong>For Loop:</strong> Can be used with any iterable object</li>
+    <li><strong>For...of Loop:</strong> Can only be used with iterable objects</li>
+    <li><strong>For Loop:</strong> Allows you to modify the array while iterating over it</li>
+    <li><strong>For...of Loop:</strong> Does not allow you to modify the array while iterating over it</li>
+    <li><strong>For Loop:</strong> More verbose syntax</li>
+    <li><strong>For...of Loop:</strong> More concise syntax</li>
+  </ul>
+
+  <script>
+    const myArray = ['apple', 'banana', 'orange'];
+
+    // For Loop Example
+    console.log('for loop');
+    for (let i = 0; i < myArray.length; i++) {
+      console.log(myArray[i]);
+    }
+
+    // For...of Loop Example
+    console.log('for...of loop');
+    for (const value of myArray) {
+      console.log(value);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Break and Continue in JavaScript</title>
+</head>
+
+<body>
+  <h1>Break and Continue in JavaScript</h1>
+  <p>In the first example, we use the break statement to stop the loop once it reaches 3. In the second example, we use
+    the continue statement to skip over the number 3 and continue with the rest of the loop. In both cases, we use
+    document.write to display the results in the HTML document.</p>
+  <h2>Break Example</h2>
+  <p>This loop will iterate over the numbers 1 through 5, but will stop once it reaches 3:</p>
+  <script>
+    for (let i = 1; i <= 5; i++) {
+      if (i === 3) {
+        break;
+      }
+      document.write(i + "<br>");
+    }
+  </script>
+
+  <h2>Continue Example</h2>
+  <p>This loop will iterate over the numbers 1 through 5, but will skip over the number 3:</p>
+  <script>
+    for (let i = 1; i <= 5; i++) {
+      if (i === 3) {
+        continue;
+      }
+      document.write(i + "<br>");
+    }
+  </script>
+</body>
+
+</html>

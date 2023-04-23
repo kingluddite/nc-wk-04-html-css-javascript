@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>For Loop vs For Of Loop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Why use a for loop vs a for of loop in JavaScript?</h1>
+  <p>
+    <strong>
+      The main difference between a <code>for</code> loop and a <code>for...of</code> loop in JavaScript is that a
+      <code>for</code> loop is used to loop through a block of code a specified number of times, while a
+      <code>for...of</code> loop is used to iterate over iterable objects (such as arrays) and loop through their
+      values.
+    </strong>
+  </p>
+  <p>
+    If you need to loop a specific number of times, then a <code>for</code> loop is the way to go. For example, if you
+    need to loop through an array and perform a certain action on each element, you could use a <code>for</code> loop to
+    iterate over the array using its length property:
+  </p>
+  <pre><code>const arr = [1, 2, 3, 4, 5];
+
+for (let i = 0; i &lt; arr.length; i++) {
+  console.log(arr[i]);
+}</code></pre>
+  <p>
+    If you only need to loop through the values of an iterable object, a <code>for...of</code> loop can make your code
+    more concise and easier to read. Here's an example of how you could use a <code>for...of</code> loop to iterate over
+    an array:
+  </p>
+  <pre><code>const arr = [1, 2, 3, 4, 5];
+
+for (const value of arr) {
+  console.log(value);
+}</code></pre>
+  <p>
+    Ultimately, the choice between a <code>for</code> loop and a <code>for...of</code> loop depends on what you're
+    trying to accomplish in your code. Both types of loops have their own unique use cases and can be powerful tools in
+    the right hands.
+  </p>
+
+  <h2>What is the difference between iterables and arrays?</h2>
+  <h3>This is an advanced topic</h3>
+  <p>In JavaScript, an array is a special kind of object that stores an ordered list of data. It is indexed by
+    non-negative integers, with the first element at index 0, the second element at index 1, and so on. Arrays have a
+    length property, which is the number of elements in the array.</p>
+  <p>While arrays are iterables, not all iterables are arrays. For example, strings, maps, sets, and generators are also
+    iterables, but they are not arrays. Iterables offer a more general and flexible way to work with sequences of values
+    in JavaScript.</p>
+  <p>
+    On the other hand, an iterable is a generalization of the array concept, and it represents a sequence of values that
+    can be iterated over using a for...of loop. The iterable can be any object that has a Symbol.iterator property that
+    returns an iterator. An iterator is an object that has a next method, which returns the next value in the sequence
+    and
+    a done property that indicates when the iteration is complete.
+  </p>
+
+  <p>While arrays are iterables, not all iterables are arrays. For example, strings, maps, sets, and generators are also
+    iterables, but they are not arrays. Iterables offer a more general and flexible way to work with sequences of values
+    in JavaScript.</p>
+</body>
+
+</html>
